@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/RSA-Verfahren/RSA-Verfahren.iml" filepath="$PROJECT_DIR$/RSA-Verfahren/RSA-Verfahren.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RSA-Verfahren_GER.iml" filepath="$PROJECT_DIR$/.idea/RSA-Verfahren_GER.iml" />
     </modules>
   </component>
