@@ -11,7 +11,7 @@ public class Calculation {
     /* Die Methode isPrime soll zu einer gegebenen Zahl n ermitteln,
     *  ob es sich um eine Primzahl handelt oder nicht. */
     public boolean isPrime(int n){
-        if (n == 1) return false;
+        if (n == 1 || n == 0) return false;
         for(int i=2; i<n; i++) {
             if(n%i==0) return false;
         }
