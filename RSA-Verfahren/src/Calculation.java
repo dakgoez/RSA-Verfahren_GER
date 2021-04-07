@@ -52,4 +52,32 @@ public class Calculation {
         }
         return count;
     }
+
+    // generateRandomKey_E-Methode
+    /* Die Methode generateRandomKey_E erstellt anhand einer Eingabe n einen zufällig generierten
+    *  öffentlichen Schlüssel e.*/
+    public int generateRandomKey_E(int n){
+        int min = 1;
+        int max = phi(n);
+        int e = 0;
+        while(true){
+            e = (int) (Math.random() * (max - min)) + min;
+            if(ggT(e, phi(n))==1) break;
+        }
+        return e;
+    }
+
+    // generateKey_D-Methode
+    /* Die Methode generateKey_D erstellt anhand des öffentlichen Schlüssels e und dem Produkt
+    *  der eingegebenen Primzahlen p und q einen privaten Schlüssel d. */
+    public int generateKey_D(int e, int n){
+        int min = 1;
+        int max = phi(n);
+        int d = 0;
+        while(true){
+            d = (int) (Math.random() * (max - min)) + min;
+            if(d*e%phi(n)==1) break;
+        }
+        return d;
+    }
 }
