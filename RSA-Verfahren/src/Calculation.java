@@ -21,21 +21,9 @@ public class Calculation {
     // größter gemeinsamer Teiler (ggT)
     /* Die ggT-Methode soll den größten gemeinsamen Teiler zweier Zahlen a und b ermitteln.
     *  Der Algorithmus arbeitet rekursiv. */
-    public int ggT(int a, int b){
+    private int ggT(int a, int b){
         if(a==b || b==0) return a;
         else return ggT(b,a%b);
-    }
-
-    // Primfaktorzerlegung
-    /* Die primFaktor-Methode repräsentiert die Primfaktorzerlegung.
-    *  Alle Primfaktoren einer eingebenen Zahl n werden in einer Liste gespeichert. */
-    public List<Integer> primFaktor(int n){
-        List<Integer> factors = new ArrayList<>();
-        if(isPrime(n)) {factors.add(n); return factors;}
-        for (int i = 1; i <= n/2; i++){
-            if(isPrime(i) && (n%i == 0)) {factors.add(i);}
-        }
-        return factors;
     }
 
     // Phi-Funktion
@@ -44,7 +32,7 @@ public class Calculation {
     *  ggT(i,n) = 1 => beide Zahlen sind teilerfremd
     *  ggT(i,n) !=1 => beide Zahlen sind NICHT terlerfremd
     *  am Ende wird die Anzahl aller teilerfremden Zahlen zur Eingabe n ausgegeben. */
-    public int phi(int n){
+    private int phi(int n){
         if(n == 1) return 1;
         int count = 0;
         for(int i = 1; i < n; i++){

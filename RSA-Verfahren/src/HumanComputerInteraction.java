@@ -14,7 +14,7 @@ public class HumanComputerInteraction {
 
     /* Die Methode enterPrimeNumber fordert den User dazu auf, eine Primzahl einzugeben.
     *  Bei einer falschen Eingabe wird eine entsprechende Exception ausgegeben. */
-    public int enterPrimeNumber(char y) throws NoPrimeNumberException, NegativeNumberException {
+    private int enterPrimeNumber(char y) throws NoPrimeNumberException, NegativeNumberException {
         int x = 0;
         System.out.println("Bitte geben Sie eine Primzahl für " + y + " ein: ");
         try{
