@@ -38,15 +38,12 @@ public class Calculation {
         return factors;
     }
 
-    public boolean has(List<Integer> l, int a){
-        for (int i : l) {
-            if(i == a) return true;
-        }
-        return false;
-    }
-
     // Phi-Funktion
-    /* Die eulersche Phi-Funktion gibt die Anzahl der teilerfremden Zahlen zur Eingabe n an. */
+    /* Die eulersche Phi-Funktion gibt die Anzahl der teilerfremden Zahlen zur Eingabe n an.
+    *  Eine Schleife wird iterativ durchgegangen, welche von i = 1 bis zu n checkt:
+    *  ggT(i,n) = 1 => beide Zahlen sind teilerfremd
+    *  ggT(i,n) !=1 => beide Zahlen sind NICHT terlerfremd
+    *  am Ende wird die Anzahl aller teilerfremden Zahlen zur Eingabe n ausgegeben. */
     public int phi(int n){
         if(n == 1) return 1;
         int count = 0;
