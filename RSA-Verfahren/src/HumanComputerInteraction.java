@@ -7,7 +7,8 @@ public class HumanComputerInteraction {
 
     Scanner scan = new Scanner(System.in);
 
-    public int enterNumber(){
+    public int enterPrimeNumber(char y){
+        System.out.print("Bitte geben Sie eine Primzahl für " + y + " ein: ");
         int n = scan.nextInt();
         return n;
     }
