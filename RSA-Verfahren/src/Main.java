@@ -14,7 +14,8 @@ public class Main {
         int e = c.generateRandomKey_E(n);
         int d = c.generateKey_D(e, n);
 
-        System.out.println(" zufällig generierter öffentlicher Schlüssel:" + "\t(" + n + ", " + e + ")");
-        System.out.println(" privater Schlüssel:" + "\t(" + n + ", " + d + ")");
+        System.out.println("- zufällig generierter öffentlicher Schlüssel:" + "\t(" + n + ", " + e + ")");
+        System.out.println("- privater Schlüssel:" + "\t\t\t\t\t\t\t(" + n + ", " + d + ")");
+        System.out.println("- Anzahl möglicher öffentlicher Schlüssel:" + "\t\t" + c.possiblePublicKeys(n));
     }
 }

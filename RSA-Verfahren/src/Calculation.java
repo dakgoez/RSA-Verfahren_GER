@@ -68,4 +68,11 @@ public class Calculation {
         }
         return d;
     }
+
+    //Methode: possiblePublicKeys
+    /* Die Methpde possiblePublicKeys gibt die Anzahl aller möglichen öffentlichen Schlüssel e an.
+    *  Hierfür wird das Produkt der beiden Eingaben p und q (Element der Primzahlen) verwendet. */
+    public int possiblePublicKeys(int n){
+        return phi(phi(n))-1;
+    }
 }
